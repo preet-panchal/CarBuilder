@@ -8,27 +8,21 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 
 public class CarBuilderApp extends Application {
-    @FXML private TextField FullName;
-    @FXML private Label EmailError;
-    @FXML private DatePicker DOB;
-    @FXML private TextField Email;
-    @FXML private TextField PhoneNumber;
-    @FXML private PasswordField Password;
 
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CarBuilderApp.class.getResource("CarBuilder-view.fxml"));
-
-
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
-
+        stage.setScene(scene);
+        stage.show();
 
     }
 
