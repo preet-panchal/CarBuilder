@@ -22,8 +22,17 @@ public class CarBuilderController {
         try {
             RadioButton selectedRadioButton = (RadioButton) Vehicle_Type.getSelectedToggle();
             System.out.println(selectedRadioButton.getText());
+            VehicleBuilder oldStyleVehicle = new OldVehicleBuilder("Blue", selectedRadioButton.getText());
+            VehicleEngineer vehicleEngineer = new VehicleEngineer(oldStyleVehicle);
+
+            vehicleEngineer.makeVehicle();
+            Vehicle firstVehicle = vehicleEngineer.getVehicle();
+
+            System.out.println(firstVehicle.getVehicleColor());
+            System.out.println(firstVehicle.getVehicleMake());
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
+
     }
 }
