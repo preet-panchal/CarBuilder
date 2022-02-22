@@ -1,9 +1,11 @@
 package csci2020u.assignmentone.carbuilder;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class CarBuilderController {
+    public ComboBox combo_box;
     @FXML
     private Label welcomeText;
 
