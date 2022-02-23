@@ -15,6 +15,9 @@ public class VehicleEngineer {
     public void makeVehicle() {
         this.vehicleBuilder.buildVehicleColor();
         this.vehicleBuilder.buildVehicleMake();
+        this.vehicleBuilder.buildVehicleType();
+        this.vehicleBuilder.buildVehicleOwner();
+        this.vehicleBuilder.buildVehiclePrice();
     }
 
 }

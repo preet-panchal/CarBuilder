@@ -10,61 +10,63 @@
           xmlns:fx="http://javafx.com/fxml" hgap="5" vgap="10">
     <padding><Insets top="35" right="5" bottom="5" left="50"/></padding>
 
-    <Label text="Full Name: " GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-    <TextField id="FullName" fx:id="FullName" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Welcome to Car Builder!" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    <Label text="Full Name: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField id="FullName" fx:id="FullName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-    <Label text="Vehicle Type: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-    <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+    <Label text="E-mail: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField id="Email" fx:id="Email" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Phone #: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <TextField id="PhoneNumber" fx:id="PhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Vehicle Type: " GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
         <RadioButton text="Sedan" id="Sedan" fx:id="Sedan">
             <toggleGroup>
-                <ToggleGroup fx:id="Vehicle_Type"/>
+                <ToggleGroup fx:id="VehicleType"/>
             </toggleGroup>
         </RadioButton>
         <RadioButton text="SUV" id="SUV" fx:id="SUV">
             <toggleGroup>
-                <fx:reference source="Vehicle_Type"/>
+                <fx:reference source="VehicleType"/>
             </toggleGroup>
         </RadioButton>
         <RadioButton text="Minivan" id="Mini_Van" fx:id="Mini_Van">
             <toggleGroup>
-                <fx:reference source="Vehicle_Type"/>
+                <fx:reference source="VehicleType"/>
             </toggleGroup>
         </RadioButton>
     </HBox>
 
-    <Label text="Vehicle Make: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <HBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+    <Label text="Vehicle Make: " GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
         <RadioButton text="Toyota" id="Toyota" fx:id="Toyota">
             <toggleGroup>
-                <ToggleGroup fx:id="Vehicle_Make"/>
+                <ToggleGroup fx:id="VehicleMake"/>
             </toggleGroup>
         </RadioButton>
         <RadioButton text="Honda" id="Honda" fx:id="Honda">
             <toggleGroup>
-                <fx:reference source="Vehicle_Make"/>
+                <fx:reference source="VehicleMake"/>
             </toggleGroup>
         </RadioButton>
         <RadioButton text="Dodge" id="Dodge" fx:id="Dodge">
             <toggleGroup>
-                <fx:reference source="Vehicle_Make"/>
+                <fx:reference source="VehicleMake"/>
             </toggleGroup>
         </RadioButton>
     </HBox>
 
-    <Label text="E-mail: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-    <TextField id="Email" fx:id="Email" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Label text="Color: " GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+    <ColorPicker id="Color" fx:id="Color" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
 
-    <Label text="Phone #: " GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-    <TextField id="PhoneNumber" fx:id="PhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    <Label text="Date of Pickup: " GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+    <DatePicker id="DOP" fx:id="DOP" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
 
-    <Label text="Color: " GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-    <ColorPicker id="Color" fx:id="Color" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Button text="Start Build!" GridPane.columnIndex="1" GridPane.rowIndex="8" onAction="#onHelloButtonClick"/>
 
-    <Label text="Date of Pickup: " GridPane.columnIndex="0" GridPane.rowIndex="6"/>
-    <DatePicker id="DOP" fx:id="DOP" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-
-    <Button text="Set Order!" GridPane.columnIndex="1" GridPane.rowIndex="7" onAction="#onHelloButtonClick"/>
-
-    <Label fx:id="welcomeText" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+    <Label fx:id="buildComplete" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+    <Label fx:id="buildSummary" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
 
 </GridPane>

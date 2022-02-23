@@ -4,6 +4,9 @@ public class Vehicle implements VehiclePlan{
 
     private String vehicleColor;
     private String vehicleMake;
+    private String vehicleType;
+    private String vehicleOwner;
+    private int vehiclePrice;
 
     @Override
     public void setColor(String color) {
@@ -21,5 +24,32 @@ public class Vehicle implements VehiclePlan{
 
     public String getVehicleMake() {
         return vehicleMake;
+    }
+
+    @Override
+    public void setType(String type) {
+        vehicleType = type;
+    }
+
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    @Override
+    public void setOwner(String owner) {
+        vehicleOwner = owner;
+    }
+
+    public String getVehicleOwner() {
+        return vehicleOwner;
+    }
+
+    @Override
+    public void setPrice(int price) {
+        vehiclePrice = price;
+    }
+
+    public int getVehiclePrice() {
+        return vehiclePrice;
     }
 }
