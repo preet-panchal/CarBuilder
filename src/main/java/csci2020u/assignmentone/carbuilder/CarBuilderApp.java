@@ -17,7 +17,7 @@ public class CarBuilderApp extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(CarBuilderApp.class.getResource("CarBuilder-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 600);
-        stage.setTitle("Hello!");
+        stage.setTitle("CarBuilder");
         stage.setScene(scene);
         stage.show();
         stage.setScene(scene);
