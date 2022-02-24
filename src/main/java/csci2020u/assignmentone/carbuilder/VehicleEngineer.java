@@ -8,10 +8,12 @@ public class VehicleEngineer {
         this.vehicleBuilder = vehicleBuilder;
     }
 
+    // gets newly built vehicle
     public Vehicle getVehicle() {
         return this.vehicleBuilder.getVehicle();
     }
 
+    // builds vehicle
     public void makeVehicle() {
         this.vehicleBuilder.buildVehicleColor();
         this.vehicleBuilder.buildVehicleMake();

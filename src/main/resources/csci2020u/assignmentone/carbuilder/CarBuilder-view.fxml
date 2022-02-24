@@ -3,23 +3,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
-<?import javafx.collections.*?>
-<?import java.lang.String?>
 
+<!--GridPane to clearly structure GUI with padding to style-->
 <GridPane xmlns="http://javafx.com/javafx" fx:controller="csci2020u.assignmentone.carbuilder.CarBuilderController"
           xmlns:fx="http://javafx.com/fxml" hgap="5" vgap="10">
     <padding><Insets top="35" right="5" bottom="5" left="50"/></padding>
 
+    <!--Title and text field to ask for users full name to use as owner of vehicle-->
     <Label text="Welcome to Car Builder!" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
     <Label text="Full Name: " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
     <TextField id="FullName" fx:id="FullName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
+    <!--Text field to ask for users email to use as contact info-->
     <Label text="E-mail: " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
     <TextField id="Email" fx:id="Email" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
+    <!--Text field to ask for users phone number to use as contact info-->
     <Label text="Phone #: " GridPane.columnIndex="0" GridPane.rowIndex="3"/>
     <TextField id="PhoneNumber" fx:id="PhoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
+    <!--Radio buttons to allow user to select type of vehicle-->
+    <!--Use toggleGroup to keep radio buttons together-->
     <Label text="Vehicle Type: " GridPane.columnIndex="0" GridPane.rowIndex="4"/>
     <HBox GridPane.columnIndex="1" GridPane.rowIndex="4">
         <RadioButton text="Sedan" id="Sedan" fx:id="Sedan">
@@ -39,6 +43,8 @@
         </RadioButton>
     </HBox>
 
+    <!--Radio buttons to allow user to select make of vehicle-->
+    <!--Use toggleGroup to keep radio buttons together-->
     <Label text="Vehicle Make: " GridPane.columnIndex="0" GridPane.rowIndex="5"/>
     <HBox GridPane.columnIndex="1" GridPane.rowIndex="5">
         <RadioButton text="Toyota" id="Toyota" fx:id="Toyota">
@@ -58,14 +64,18 @@
         </RadioButton>
     </HBox>
 
+    <!--Text field to ask for users to select a color for their vehicle-->
     <Label text="Color: " GridPane.columnIndex="0" GridPane.rowIndex="6"/>
     <ColorPicker id="Color" fx:id="Color" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
 
+    <!--Text field to ask for users to select a date to pick up their vehicle order-->
     <Label text="Date of Pickup: " GridPane.columnIndex="0" GridPane.rowIndex="7"/>
     <DatePicker id="DOP" fx:id="DOP" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
 
+    <!--Button to generate order-->
     <Button text="Start Build!" GridPane.columnIndex="1" GridPane.rowIndex="8" onAction="#onHelloButtonClick"/>
 
+    <!--Labels to display users vehicle build summary after he build is complete-->
     <Label fx:id="buildComplete" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
     <Label fx:id="buildSummary" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
 
