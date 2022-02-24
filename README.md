@@ -1,6 +1,6 @@
-CSCI2020U: Assignment 1
-Ontario Tech University
-Collaborators: Eihab & Preet
+**CSCI2020U: Assignment 1
+**Ontario Tech University
+**Collaborators: Eihab & Preet
 
 Project: 
 CarBuilder
